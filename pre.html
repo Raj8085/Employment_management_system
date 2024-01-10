@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    <div class="col-2"> 
+    <table id="myTable" class="display">
+        <thead>
+            <tr>
+                <th>First name</th>
+                <th>Column 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Row 1 Data 1</td>
+                <td>Row 1 Data 2</td>
+            </tr>
+            <tr>
+                <td>Row 2 Data 1</td>
+                <td>Row 2 Data 2</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function () {
+            var data = [
+                ['rajeev','patel'],
+                ['prince','gurjar'],
+                ['prince','pipariya'],
+                ['rajeev','patel'],
+                ['keshav','gurjar'],
+                ['prince','pipariya'],
+                ['rajeev','patel'],
+                ['nikhil','gurjar'],
+                ['prince','pipariya'],
+                ['rajeev','patel'],
+                ['prince','gurjar'],
+                ['prince','pipariya']
+        ]
+
+            $('#myTable').DataTable({
+                responsive: true,
+                data: data
+            });
+        });
+    </script>
+
+</body>
+
+</html>
